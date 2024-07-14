@@ -9,7 +9,7 @@ An experimental Python-based framework for training modular neural cellular auto
 
 ## Scripts
 - [train_nca.py]()
-- [eval_nca.py]()
+- [eval_nca.py](https://ds.lis.2i2c.cloud/hub/user-redirect/lab/tree/eval_nca.ipynb)
   
 ## Usage
 Click one of the script links above to open a Jupyter notebook session.
