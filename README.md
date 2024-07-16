@@ -8,6 +8,7 @@ _The neural network embedded inside each simulation 'pixel', which mimics a gene
 
 ![Neural network visualisation](https://github.com/paveworkshop/modular-nca/blob/main/previews/hex-leaf-mono-7-0-64-16-9241-3826-1721073373.gif)  
 _The cellular automata 'substrate' is composed of 3 visible channels (rgb), 1 alpha channel and 12 hidden channels (h0-h12) which the model decides how to use.  
+
 In this discarded experiment, the NCA learnt to 'cheat' the task of growing a leaf by using the walls of the substrate._
 
 ## Preview
