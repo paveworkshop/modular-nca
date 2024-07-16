@@ -1,6 +1,14 @@
 # modular-nca
 An experimental Python-based framework for training modular neural cellular automata.
 
+## Preview
+A modular NCA trained on a simplified leaf image.  
+
+**Training sequence**  
+ ![Leaf training result](https://github.com/paveworkshop/modular-nca/blob/main/training_datasets/leaf-mono-thumbnail.png)
+**Training result**  
+![Leaf training sequence](https://github.com/paveworkshop/modular-nca/blob/main/previews/hex-leaf-mono-1-0-96-16-9241-1248-1721141463.gif) 
+
 ## Contents
 - [Scripts](#Scripts)
 - [Usage](#Usage)
