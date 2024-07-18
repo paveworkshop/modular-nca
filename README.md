@@ -36,7 +36,10 @@ Click one of the script links above to open a Jupyter notebook session.
 
 ## Credits
 The NCA architecture was based on [this](https://distill.pub/2020/growing-ca/) paper:  
-Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing neural cellular automata. Distill, 5(2), e23.
+Mordvintsev, A., Randazzo, E., Niklasson, E., & Levin, M. (2020). Growing neural cellular automata. Distill, 5(2), e23. 
+
+With helpful insights from this paper too:  
+Catrina, S., Catrina, M., Băicoianu, A., & Plajer, I. C. (2024). Learning about Growing Neural Cellular Automata. IEEE Access.
 
 **Library Credits**
 - [Numpy](https://numpy.org/): Harris, C.R., Millman, K.J., van der Walt, S.J. et al. Array programming with NumPy. Nature 585, 357–362 (2020). DOI: 10.1038/s41586-020-2649-2.
