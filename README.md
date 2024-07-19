@@ -12,12 +12,12 @@ The cellular automata 'substrate' is composed of 3 visible channels (rgb), 1 alp
 _In this discarded experiment, the NCA learnt to 'cheat' the task of growing a leaf by using the walls of the substrate._
 
 ## Contents
-- [Preview](#Preview)
+- [Results](#Results)
 - [Usage](#Usage)
 - [Credits](#Credits)
 - [License](#License)
 
-## Preview
+## Results
 A modular NCA trained on a simplified leaf image.  
 
 **Training sequence**  
@@ -25,6 +25,9 @@ A modular NCA trained on a simplified leaf image.
  
 **Training result**  
 ![Leaf training sequence](https://github.com/paveworkshop/modular-nca/blob/main/previews/hex-leaf-mono-1-0-96-16-9241-1248-1721141463.gif) 
+
+**Training Progression**  
+![Leaf training progression](https://github.com/paveworkshop/modular-nca/blob/main/previews/training_progression_visible.mp4)
 
 ## Usage
 - [eval_nca.py](eval_nca.ipynb)
