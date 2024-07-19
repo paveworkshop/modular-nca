@@ -11,6 +11,12 @@ The cellular automata 'substrate' is composed of 3 visible channels (rgb), 1 alp
 
 _In this discarded experiment, the NCA learnt to 'cheat' the task of growing a leaf by using the walls of the substrate._
 
+## Contents
+- [Preview](#Preview)
+- [Usage](#Usage)
+- [Credits](#Credits)
+- [License](#License)
+
 ## Preview
 A modular NCA trained on a simplified leaf image.  
 
@@ -20,19 +26,28 @@ A modular NCA trained on a simplified leaf image.
 **Training result**  
 ![Leaf training sequence](https://github.com/paveworkshop/modular-nca/blob/main/previews/hex-leaf-mono-1-0-96-16-9241-1248-1721141463.gif) 
 
-## Contents
-- [Scripts](#Scripts)
-- [Usage](#Usage)
-- [Credits](#Credits)
-- [License](#License)
-
-## Scripts
-- [train_nca.py]()
-- [eval_nca.py](https://ds.lis.2i2c.cloud/hub/user-redirect/lab/tree/eval_nca.ipynb)
-  
 ## Usage
-Click one of the script links above to open a Jupyter notebook session.
+- [eval_nca.py](eval_nca.ipynb)
+- [nca_app.py](nca_app.py)
 
+In order to preview the results of the pre-trained models, please use the eval_nca.ipynb notebook in the root directory.
+The [modular_nca](modular_nca) folder contains the Python source code.
+
+The GUI desktop application 'nca_app.py' is used to train models and recording previews. It is not expected you will train models, but for completeness, it can be activated via the command line using 'Python3 nca_app.py <app_mode>', where available app_modes are:
+
+**App Modes**  
+-1 = train model with current configuration in nca_app.py and config.py.  
+0 = preview images pasted on the grid cells, like the training target image.  
+1+ = evaluate model (run simulation) using latest training checkpoint, preview model layers as below.  
+
+**Layer Preview Modes** (for the current model, with 12 layers)   
+1 = rgb  
+2 = alpha  
+3 = hidden layers (0-3)  
+4 = hidden layers (3-6)  
+5 = hidden layers (6-9)  
+6 = hidden layers (9-12)  
+7 = all layers  
 
 ## Credits
 The NCA architecture was based on [this](https://distill.pub/2020/growing-ca/) paper:  
