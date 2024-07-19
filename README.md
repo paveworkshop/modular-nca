@@ -38,16 +38,16 @@ The GUI desktop application 'nca_app.py' is used to train models and recording p
 **App Modes**  
 -1 = train model with current configuration in nca_app.py and config.py.  
 0 = preview images pasted on the grid cells, like the training target image.  
-1+ = evaluate model (run simulation) using latest training checkpoint, preview model layers as below.  
+1+ = evaluate model (run simulation) using latest training checkpoint, previewing selecting grid channels as below.  
 
-**Layer Preview Modes** (for the current model, with 12 layers)   
+**Channel Preview Modes** (for the current model, with 12 channels)   
 1 = rgb  
 2 = alpha  
-3 = hidden layers (h0-3)  
-4 = hidden layers (h3-6)  
-5 = hidden layers (h6-9)  
-6 = hidden layers (h9-12)  
-7 = all layers  
+3 = hidden channels (h0-3)  
+4 = hidden channels (h3-6)  
+5 = hidden channels (h6-9)  
+6 = hidden channels (h9-12)  
+7 = all channels  
 
 ## Credits
 The NCA architecture was based on [this](https://distill.pub/2020/growing-ca/) paper:  
