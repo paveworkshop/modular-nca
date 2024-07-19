@@ -5,9 +5,9 @@
 _The neural network embedded inside each simulation 'pixel', which mimics a gene regulatory network._
  
 **A petri dish for self-taught growth dynamics**  
+The cellular automata 'substrate' is composed of 3 visible channels (rgb), 1 alpha channel and 12 hidden channels (h0-h12) which the neural network within each cell learns to incrementally update towards a stable pattern.  
 
 ![Neural network visualisation](https://github.com/paveworkshop/modular-nca/blob/main/previews/hex-leaf-mono-7-0-64-16-9241-3826-1721073373.gif)  
-The cellular automata 'substrate' is composed of 3 visible channels (rgb), 1 alpha channel and 12 hidden channels (h0-h12) which the model decides how to use.  
 
 _In this discarded experiment, the NCA learnt to 'cheat' the task of growing a leaf by using the walls of the substrate._
 
@@ -20,14 +20,16 @@ _In this discarded experiment, the NCA learnt to 'cheat' the task of growing a l
 ## Results
 A modular NCA trained on a simplified leaf image.  
 
-**Training sequence**  
- ![Leaf training result](https://github.com/paveworkshop/modular-nca/blob/main/training_datasets/leaf-mono-thumbnail.png)
+**Training dataset**  
+ ![Leaf training set](https://github.com/paveworkshop/modular-nca/blob/main/training_datasets/leaf-mono-thumbnail.png)
  
 **Training result**  
-![Leaf training sequence](https://github.com/paveworkshop/modular-nca/blob/main/previews/hex-leaf-mono-1-0-96-16-9241-1248-1721141463.gif) 
+After ~4500 epochs of training, the model is persisently able to grow a persistent leaf pattern in 500 steps, albeit not in a way that is biologically accurate.  
+![Leaf training result](https://github.com/paveworkshop/modular-nca/blob/main/previews/leaf-mono-small-training-result-visible.gif)
 
 **Training Progression**  
-![Leaf training progression](https://github.com/paveworkshop/modular-nca/blob/main/previews/leaf-mono-small-training-progression-visible.mp4)
+The model slowly learns to use all 16 channels to encode helpful cues (like edges) that help cells express the right colour in the right places. First it learns to grow the solid shape, followed by finer details of the venation pattern.  
+![Leaf training progression](https://github.com/paveworkshop/modular-nca/blob/main/previews/leaf-mono-small-training-progression-all.gif)
 
 ## Usage
 - [eval_nca.py](eval_nca.ipynb)
@@ -44,9 +46,9 @@ The GUI desktop application 'nca_app.py' is used to train models and recording p
 1+ = evaluate model (run simulation) using latest training checkpoint, previewing selecting grid channels as below.  
 
 **Channel Preview Modes** (for the current model, with 16 channels total)   
-1 = rgb 
-2 = alpha 
-3 = hidden channels (h0-3)  
+1 = rgb   
+2 = alpha  
+3 = hidden channels (h0-3)    
 4 = hidden channels (h3-6)  
 5 = hidden channels (h6-9)  
 6 = hidden channels (h9-12)  
