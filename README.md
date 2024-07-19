@@ -43,10 +43,10 @@ The GUI desktop application 'nca_app.py' is used to train models and recording p
 **Layer Preview Modes** (for the current model, with 12 layers)   
 1 = rgb  
 2 = alpha  
-3 = hidden layers (0-3)  
-4 = hidden layers (3-6)  
-5 = hidden layers (6-9)  
-6 = hidden layers (9-12)  
+3 = hidden layers (h0-3)  
+4 = hidden layers (h3-6)  
+5 = hidden layers (h6-9)  
+6 = hidden layers (h9-12)  
 7 = all layers  
 
 ## Credits
