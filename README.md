@@ -27,7 +27,7 @@ A modular NCA trained on a simplified leaf image.
 ![Leaf training sequence](https://github.com/paveworkshop/modular-nca/blob/main/previews/hex-leaf-mono-1-0-96-16-9241-1248-1721141463.gif) 
 
 **Training Progression**  
-![Leaf training progression](https://github.com/paveworkshop/modular-nca/blob/main/previews/leaf-mono-small-training_progression-visible.mp4)
+![Leaf training progression](https://github.com/paveworkshop/modular-nca/blob/main/previews/leaf-mono-small-training-progression-visible.mp4)
 
 ## Usage
 - [eval_nca.py](eval_nca.ipynb)
