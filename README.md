@@ -33,16 +33,16 @@ A modular NCA trained on a simplified leaf image.
 In order to preview the results of the pre-trained models, please use the eval_nca.ipynb notebook in the root directory.
 The [modular_nca](modular_nca) folder contains the Python source code.
 
-The GUI desktop application 'nca_app.py' is used to train models and recording previews. It is not expected you will train models, but for completeness, it can be activated via the command line using 'Python3 nca_app.py <app_mode>', where available app_modes are:
+The GUI desktop application 'nca_app.py' is used to train models and recording previews. It is not expected you will train models, but for completeness, it can be activated via the command line using _python3 nca_app.py <app_mode>_, where available app_modes are:
 
 **App Modes**  
 -1 = train model with current configuration in nca_app.py and config.py.  
 0 = preview images pasted on the grid cells, like the training target image.  
 1+ = evaluate model (run simulation) using latest training checkpoint, previewing selecting grid channels as below.  
 
-**Channel Preview Modes** (for the current model, with 12 channels)   
-1 = rgb  
-2 = alpha  
+**Channel Preview Modes** (for the current model, with 16 channels total)   
+1 = rgb 
+2 = alpha 
 3 = hidden channels (h0-3)  
 4 = hidden channels (h3-6)  
 5 = hidden channels (h6-9)  
