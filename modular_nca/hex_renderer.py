@@ -64,7 +64,7 @@ class HexRenderer:
 		self.arr_mapped_vectors = np.round(arr_mapped_vectors).astype(np.int32)
 
 	def draw_state(self, mode, readout=False):
-		
+
 		colour_source = self.model.state[:, :3]
 		label = self.model.labels[mode-1]
 
@@ -116,7 +116,7 @@ class HexRenderer:
 			for i in range(6):
 
 				if i < (mode-1):
-					self.draw_state(i+1, True)
+					self.draw_state(i+1, not adjusting_view)
 					layer_sets.append(self.preview.copy())
 
 				else:
