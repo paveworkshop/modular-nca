@@ -8,6 +8,7 @@ from .config import checkpoint_dir
 grad_factor = 0.75
 living_threshold = 0.2
 cell_fire_rate = 0.8
+neighbourhood_disorder = 0
 
 nn_input_entries = 8
 
@@ -31,23 +32,33 @@ class HexNeuralModel(HexModel):
 
 		self.update_mask = torch.ones((self.cell_count), dtype=torch.bool)
 
-	def scramble_neighbours(self):
+	def scramble_neighbours(self, disorder=0.5):
 
-		self.neighbours = np.take(self.layout.neighbour_indices, np.random.permutation(self.layout.neighbour_indices.shape[0]), axis=0)
+		cell_count = len(self.layout.neighbour_indices)
+		choice_selection = np.random.rand(cell_count)
+		indices = np.arange(6)
+		for i in range(cell_count):
+
+			if choice_selection[i] < disorder:
+				
+				np.random.shuffle(indices)
+				self.neighbours[i] = self.layout.neighbour_indices[i][indices]
+			
+			else:
+				self.neighbours[i] = self.layout.neighbour_indices[i]
 
 	def set_mask(self, hex_mask):
 
 		self.custom_mask = hex_mask
-
 		self.update_mask = (torch.mean(self.custom_mask, axis=1) < living_threshold) & ~self.border_mask
 
 	def blit_mask(self):
 
 		self.state[:, :3] = self.custom_mask
 
-	def preview_mask(self, hex_mask):
+	def preview_alpha(self, hex_image):
 
-		self.state[:, 0].copy_(hex_mask)
+		self.state[:, 0] = hex_image[:, 3]
 
 	def reset_grid_rand(self):
 		
@@ -61,6 +72,8 @@ class HexNeuralModel(HexModel):
 		self.age = 0
 
 	def reset_grid_seed(self, hex_image):
+
+		self.scramble_neighbours(neighbourhood_disorder)
 
 		self.state = torch.zeros(*self.state.shape)
 		self.last_state = torch.zeros(*self.state.shape)

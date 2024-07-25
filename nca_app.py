@@ -47,7 +47,7 @@ if __name__ == "__main__":
             dataset.load_and_sample_images(config.dataset_path, sample_coverage=0.4, samples_per_image=2000, blur_strength=0.01)
         
         model.reset_grid_seed(dataset.samples[-1])
-        #model.preview_mask(dataset.masks[0])
+        #model.preview_alpha(dataset.samples[-1])
 
     if APP_MODE == -1:
 
