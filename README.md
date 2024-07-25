@@ -35,7 +35,7 @@ The model slowly learns to use all 16 channels to encode helpful cues (like edge
 - [eval_nca.py](eval_nca.ipynb)
 - [nca_app.py](nca_app.py)
 
-In order to preview the results of the pre-trained models, please use the 'eval_nca.ipynb' notebook, by cloning this repository, in order to maintain the dependencies and file structure.
+In order to preview the results of the 'leaf-mono-small' experiment, without training the models again yourself (very slow), please use the 'eval_nca.ipynb' notebook, by cloning this repository, in order to maintain the dependencies and file structure.
 The [modular_nca](modular_nca) folder contains the Python source code.
 
 The GUI desktop application 'nca_app.py' is used to train models and recording previews. It is not expected you will train models, but for completeness, it can be activated via the command line using _python3 nca_app.py <app_mode>_, where available app_modes are:
