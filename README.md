@@ -1,5 +1,5 @@
 # modular-nca
-**An experimental Python-based framework for training modular neural cellular automata (MNCAs).**
+**An experimental Python-based framework for training modular neural cellular automata.**
 
  ![Neural network visualisation](https://github.com/paveworkshop/modular-nca/blob/main/previews/neural-network.png)  
 _The neural network embedded inside each simulation 'pixel', which mimics a gene regulatory network._
